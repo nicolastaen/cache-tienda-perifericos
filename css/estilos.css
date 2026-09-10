@@ -33,9 +33,27 @@ body{
     font-style: normal;
     color: rgb(255, 162, 0);
 }
-.banner1{
-    width: 100%;
+.slider-container{
+    width: 90%;
     height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+.slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out; 
+}
+.banner{
+    min-width: 100%;
+    height: auto;
+}
+.banner img{
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
 }
 
 .texto{
@@ -53,7 +71,7 @@ body{
     color: rgb(255, 162, 0);
 }
 
-.barra{
+.search-box{
     width: 100%;
     height: auto;
     display: flex;
@@ -61,17 +79,14 @@ body{
     text-align: start;
 }
 
-.barra .buscar{
+.search-box input{
     margin-top: 10px;
-    border: 2px solid;
+    border: none;
     border-radius: 30px;
     background-color: rgb(233, 233, 233);
     padding: 10px;
     width: 50%;
-}
-.barra .buscar p{
-    font-family: "Changa One", sans-serif;
-    font-style: normal;
+    outline: none;
 }
 
 .seccion2{

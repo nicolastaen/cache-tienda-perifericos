@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div class = "top_pagina">
-        <header>
-            <img src="imagenes/logo-safari-512px-e1771825042646.png" alt="logo" width="100px">
-        </header>
+    <header>
         <nav>
-            <a>inicio</a>
-            <a>productos</a>
-            <a>carrito</a>
+            <div class="navbar">
+                <img src="imagenes/logo-safari-512px-e1771825042646.png" alt="logo">
+            </div>
+    
+            <form class="search-box">
+                <input type="text" placeholder="Buscar algo" name="buscar" required>
+            </form>
+    
+            <div class="login">
+                <a href="#">INICIAR SESIÓN / REGISTRAR</a>
+            </div>
         </nav>
-    </div>
+    </header>
     <section class="slider-container">
         <div class="slider">
             <div class="banner">
@@ -25,6 +30,9 @@
             <div class="banner">
                 <img src="imagenes/banner3.png" alt="banner2">
             </div>
+            <div class="banner">
+                <img src="imagenes/banner_comida.png" alt="">
+            </div>
         </div>
     </section>
     
@@ -32,11 +40,6 @@
         <div class="texto">
             <p>¿Que buscas?</p>
         </div>
-    
-        <form class="search-box">
-            <input type="text" placeholder="Buscar algo" name="buscar" required>
-
-        </form>
     </section>
 
     <section class="seccion2">

@@ -122,6 +122,7 @@ header img{
     width: 95%;
     height: auto;
     border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.5);
 
     transition: transform 0.3s ease;
 }
@@ -138,23 +139,72 @@ header img{
 
 
 .productos{
+    width: 100%;
+    height: auto;
     margin-top: 20px;
     display: flex;
     align-items: center;
     text-align: center;
-    padding: 15px;
+    justify-content: space-around;
 }
 .card{
-    border: 2px solid black;
-    border-radius: 30px;
-    width: 300px;
+    border-radius: 15px;
+    width: 250px;
     margin-top: 30px;
     background-color: aliceblue;
+    box-shadow: 0px 0px 10px rgb(0,0,0,0.5);
 
 }
 .card img{
     width: 100%;
     height: auto;
+    border-bottom: 1px solid #ccc;
+    
+}
+.card-body h1, p{
+    font-size: small;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+    padding: 3px;
+}
+.btn{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    overflow: hidden;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.btn-texto{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s cubic-bezier(0.85,0,0.35,0.65);
+}
+
+.btn-logo{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    transition: transform 0.5s cubic-bezier(0.75,1,0.36,0.22);
+}
+.btn:hover .btn-texto{
+    transform: translateY(-80px);
+}
+.btn:hover .btn-logo{
+    transform: translate(-50%, -50%);
 }
 
 @media(max-width: 576px){

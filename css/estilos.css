@@ -8,10 +8,8 @@
 
 body{
     background-color: #E7E7E7;
-    padding: 70px;
-    margin-top: 30px;
+    margin-top: 89px;
 }
-
 header{
     width: 100%;
     height: auto;
@@ -23,7 +21,6 @@ header{
     left: 0;
     position: fixed;
     z-index: 1000;
-    box-shadow: 5px 5px 10px rgb(0,0,0,0.5);
 }
 nav{
     width: 70%;
@@ -72,12 +69,9 @@ header img{
 }
 
 .slider-container{
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin: auto;
     overflow: hidden;
-    margin-top: 30px;
-    border-radius: 30px;
 }
 .slider {
     display: flex;
@@ -129,14 +123,6 @@ header img{
 .seccion2 .cards img:hover{
     transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
 
 .productos{
     width: 100%;
@@ -205,6 +191,17 @@ header img{
 }
 .btn:hover .btn-logo{
     transform: translate(-50%, -50%);
+}
+
+footer{
+    width: 100%;
+}
+
+.pie-pagina{
+    background-color: #211B1B;
+    padding: 20px;
+    width: 100%;
+    margin-top: 50px; 
 }
 
 @media(max-width: 576px){

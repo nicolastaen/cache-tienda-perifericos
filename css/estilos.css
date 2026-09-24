@@ -11,6 +11,8 @@ rojo oscuro #5a0f1b
     margin: 0;
     padding: 0;
     text-decoration: none;
+    scrollbar-width: thin;
+    scrollbar-color: #c4c8cc transparent;
 }
 
 body{
@@ -175,6 +177,7 @@ header img{
     font-style: normal;
     padding: 3px;
 }
+
 .btn{
     position: relative;
     width: 120px;
@@ -219,17 +222,25 @@ footer{
 }
 
 .pie-pagina{
-    background-color:#8c2430
-;
+    background-color:#8c2430;
     padding: 20px;
     width: 100%;
     margin-top: 50px; 
 }
 
 .sobre-nosotros{
-    color: #2b2426;
+    color: #d6c7c2;
     font-family:"Changa One", sans-serif;
     font-size: x-large;
+    justify-content: center;
+    margin-left: 176px;
+    margin-right: 176px;
+    padding: 0px 24px;
+
+}
+
+.sobre-nosotros img{
+    width: 20%;
 }
 
 footer img {

@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Rubik+Dirt&display=swap');
+/*/  
+cafe #2b2426
+beige #d6c7c2
+dorado #b08d57
+rojo #8c2430
+rojo oscuro #5a0f1b
+/*/
 
 *{
     margin: 0;
@@ -7,7 +14,7 @@
 }
 
 body{
-    background-color: #E7E7E7;
+    background-color: #d6c7c2;
     margin-top: 89px;
 }
 header{
@@ -16,7 +23,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #211B1B;
+    background-color: #2b2426;
     top: 0;
     left: 0;
     position: fixed;
@@ -47,7 +54,7 @@ header img{
     font-family: "Changa One", sans-serif;
     font-weight: 400px;
     font-style: normal;
-    color: rgb(255, 162, 0);
+    color: #b08d57;
 }
 
 .search-box{
@@ -62,7 +69,9 @@ header img{
     margin-top: 25px;
     border: none;
     border-radius: 30px;
-    background-color: rgb(233, 233, 233);
+    color: #2b2426;
+    font-family: "Changa One", sans-serif;
+    background-color: #b08d57;
     padding: 10px;
     width: 90%;
     outline: none;
@@ -100,7 +109,7 @@ header img{
     font-family: "Changa One", sans-serif;
     font-weight: 400px;
     font-style: normal;
-    color: rgb(255, 162, 0);
+    color: #b08d57;
 }
 
 .seccion2{
@@ -137,7 +146,7 @@ header img{
     border-radius: 15px;
     width: 250px;
     margin-top: 30px;
-    background-color: aliceblue;
+    background-color: #b08d57;
     box-shadow: 0px 0px 10px rgb(0,0,0,0.5);
 
 }
@@ -162,8 +171,8 @@ header img{
     padding: 10px 16px;
     border: none;
     border-radius: 6px;
-    background-color: blue;
-    color: white;
+    background-color: #2b2426;
+    color: #b08d57;
     cursor: pointer;
     margin-bottom: 10px;
 
@@ -198,10 +207,16 @@ footer{
 }
 
 .pie-pagina{
-    background-color: #211B1B;
+    background-color: #2b2426;
     padding: 20px;
     width: 100%;
     margin-top: 50px; 
+}
+
+.sobre-nosotros{
+    color: #2b2426;
+    font-family:"Changa One", sans-serif;
+    font-size: x-large;
 }
 
 @media(max-width: 576px){

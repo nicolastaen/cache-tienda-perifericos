@@ -14,7 +14,7 @@ rojo oscuro #5a0f1b
 }
 
 body{
-    background-color: #d6c7c2;
+    background-color: #2b2426;
     margin-top: 89px;
 }
 header{
@@ -23,7 +23,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #2b2426;
+    background-color: #d6c7c2;
     top: 0;
     left: 0;
     position: fixed;
@@ -63,6 +63,18 @@ header img{
     display: flex;
     justify-content: center;
     text-align: start;
+}
+
+.crd-contacto{
+
+}
+
+.formulario-contacto{
+    width: 75%;
+    background-color: #8c2430;
+    justify-content: center;
+    display: flex;
+    padding: 15%;
 }
 
 .search-box input{
@@ -207,7 +219,8 @@ footer{
 }
 
 .pie-pagina{
-    background-color: #2b2426;
+    background-color:#8c2430
+;
     padding: 20px;
     width: 100%;
     margin-top: 50px; 
@@ -217,6 +230,19 @@ footer{
     color: #2b2426;
     font-family:"Changa One", sans-serif;
     font-size: x-large;
+}
+
+footer img {
+    width: 150px;
+    padding: 10px;
+}
+.pie-pagina a {
+    font-size: normal;
+    padding-left: 20px;
+    font-family: "Changa One", sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+    color: #b08d57;
 }
 
 @media(max-width: 576px){

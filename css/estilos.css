@@ -216,35 +216,55 @@ header img{
 
 footer{
     width: 100%;
+    height: auto;
+    background-color:#8c2430;
+    
 }
-
-.pie-pagina{
-    background-color:#8c2430
-;
-    padding: 20px;
+.footer1{
     width: 100%;
+    height: autos;
+    display: flex;
+    justify-content: space-between;
     margin-top: 50px; 
+    padding-top: 25px;
 }
 
-.sobre-nosotros{
-    color: #2b2426;
-    font-family:"Changa One", sans-serif;
-    font-size: x-large;
+.footer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: auto;
+    border-top: 2px solid;
+    padding: 20px;
+    margin: auto;
+}
+.pie-pagina{
+    text-align: start;
+    align-items: start;
+    width: 100%;
+    height: auto;
 }
 
 footer img {
-    width: 150px;
+    width: 80%;
     padding: 10px;
 }
+
 .pie-pagina a {
     font-size: normal;
-    padding-left: 20px;
     font-family: "Changa One", sans-serif;
     font-weight: 400px;
     font-style: normal;
     color: #b08d57;
 }
 
+.sobre-nosotros{
+    color: white;
+    font-family:"Changa One", sans-serif;
+    font-size: x-large;
+}
 @media(max-width: 576px){
     *{
     margin: 0;

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse - Caché</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <div class="navbar">
+                    <img src="imagenes/Cachelogo.png" alt="logo">
+                </div>
+
+                <form class="search-box">
+                    <input type="text" placeholder="Buscar algo" name="buscar" required>
+                </form>
+
+                <div class="login">
+                    <a href="login.html">INICIAR SESIÓN</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="categoria-seccion">
+
+            <!-- Sidebar de filtros -->
+            <aside class="filtros-sidebar">
+                <h2 class="filtros-titulo">Filtrar y ordenar</h2>
+
+                <div class="filtro-grupo">
+                    <button class="filtro-header" data-filtro="disponibilidad">
+                        Disponibilidad
+                        <span class="filtro-flecha">▲</span>
+                    </button>
+                    <div class="filtro-contenido" id="disponibilidad">
+                        <label class="filtro-check">
+                            <input type="checkbox"> En existencia <span class="filtro-cantidad">(35)</span>
+                        </label>
+                        <label class="filtro-check">
+                            <input type="checkbox"> Agotado <span class="filtro-cantidad">(29)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filtro-grupo">
+                    <button class="filtro-header" data-filtro="precio">
+                        Precio
+                        <span class="filtro-flecha">▲</span>
+                    </button>
+                    <div class="filtro-contenido" id="precio">
+                        <p class="precio-max-texto">El precio más alto es $245.990</p>
+                        <input type="range" min="0" max="246" value="246" class="rango-precio">
+                        <div class="precio-min-max">
+                            <span>$0</span>
+                            <span>$246</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filtro-grupo">
+                    <button class="filtro-header" data-filtro="color">
+                        Color
+                        <span class="filtro-flecha">▲</span>
+                    </button>
+                    <div class="filtro-contenido" id="color">
+                        <div class="color-grid">
+                            <button class="color-swatch" style="background:#f4d03f" title="Amarillo"></button>
+                            <button class="color-swatch" style="background:#2e6fd9" title="Azul"></button>
+                            <button class="color-swatch" style="background:#ffffff" title="Blanco"></button>
+                            <button class="color-swatch" style="background:#b08d57" title="Dorado"></button>
+                            <button class="color-swatch" style="background:#8a8a8a" title="Gris"></button>
+                            <button class="color-swatch multicolor" title="Multicolor"></button>
+                            <button class="color-swatch" style="background:#e07b2f" title="Naranjo"></button>
+                            <button class="color-swatch" style="background:#1a1a1a" title="Negro"></button>
+                            <button class="color-swatch" style="background:#c0c0c0" title="Plateado"></button>
+                            <button class="color-swatch" style="background:#7b2fd9" title="Morado"></button>
+                            <button class="color-swatch" style="background:#c0392b" title="Rojo"></button>
+                            <button class="color-swatch" style="background:#f4a6c1" title="Rosado"></button>
+                            <button class="color-swatch" style="background:#27ae60" title="Verde"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filtro-grupo">
+                    <button class="filtro-header" data-filtro="tasa">
+                        Tasa de sondeo
+                        <span class="filtro-flecha">▲</span>
+                    </button>
+                    <div class="filtro-contenido" id="tasa">
+                        <label class="filtro-check">
+                            <input type="checkbox"> Hasta 1k <span class="filtro-cantidad">(2)</span>
+                        </label>
+                        <label class="filtro-check">
+                            <input type="checkbox"> Hasta 2k <span class="filtro-cantidad">(1)</span>
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Grid de productos -->
+            <div class="categoria-grid">
+
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <span class="badge badge-nuevo">Nuevo!</span>
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Blazing X1 V2 Air+</h3>
+                    <p class="producto-card-precio">$124.990 CLP</p>
+                </a>
+
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <span class="badge badge-nuevo">Nuevo!</span>
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Dragonfly A9 Air Ultimate+</h3>
+                    <p class="producto-card-precio">$114.990 CLP</p>
+                </a>
+
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <span class="badge badge-nuevo">Nuevo!</span>
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Infinity .97</h3>
+                    <p class="producto-card-precio">Desde $239.990 CLP</p>
+                </a>
+
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Void Pro</h3>
+                    <p class="producto-card-precio">$89.990 CLP</p>
+                </a>
+
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <span class="badge badge-descuento">18% OFF</span>
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Sky Lite</h3>
+                    <p class="producto-card-precio">
+                        <span class="precio-tachado">$54.990</span> $44.990 CLP
+                    </p>
+                </a>
+
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+                <a href="producto.html" class="producto-card">
+                    <div class="producto-card-imagen">
+                        <img src="imagenes/mouse.png" alt="Mouse Gamer">
+                        <button class="btn-cart-flotante" onclick="event.preventDefault()">🛒</button>
+                    </div>
+                    <span class="producto-card-marca">CACHÉ</span>
+                    <h3 class="producto-card-nombre">Mouse Gamer Hex Grid</h3>
+                    <p class="producto-card-precio">$69.990 CLP</p>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer1">
+            <div class="pie-pagina">
+                <img src="imagenes/Cachelogo.png" alt="logo">
+            </div>
+            <div class="pie-pagina">
+                <a href="sobre-nosotros.html">Sobre nosotros</a>
+            </div>
+            <div class="pie-pagina">
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+        <div class="footer2">
+            hola
+        </div>
+    </footer>
+
+    <script src="js/categoria.js"></script>
+</body>
+</html>

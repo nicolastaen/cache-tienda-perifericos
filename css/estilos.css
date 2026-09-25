@@ -548,7 +548,282 @@ scroll-seamless.hidden {
 .registro-texto a:hover{
     text-decoration: underline;
 }
+.registro-box{
+    width: min(90%, 460px); /* un poco más ancho que el login por tener más campos */
+}
 
+.check-terminos{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Roboto", sans-serif;
+    color: #d6c7c2;
+    font-size: 0.85rem;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+.check-terminos input{
+    width: auto;
+    accent-color: #b08d57;
+    cursor: pointer;
+}
+/* ===== PÁGINA DE CATEGORÍA (listado con filtros) ===== */
+
+.categoria-seccion{
+    width: min(94%, 1500px);
+    margin: 20px auto 60px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ---- Sidebar de filtros ---- */
+.filtros-sidebar{
+    position: sticky;
+    top: 20px;
+}
+
+.filtros-titulo{
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #d6c7c2;
+    margin-bottom: 20px;
+}
+
+.filtro-grupo{
+    border-bottom: 1px solid rgba(214,199,194,0.15);
+    padding: 16px 0;
+}
+
+.filtro-header{
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Changa One", sans-serif;
+    font-size: 1rem;
+    color: #d6c7c2;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filtro-flecha{
+    font-size: 0.75rem;
+    color: #b08d57;
+    transition: transform 0.2s ease;
+}
+
+.filtro-header.colapsado .filtro-flecha{
+    transform: rotate(180deg);
+}
+
+.filtro-contenido{
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filtro-contenido.oculto{
+    display: none;
+}
+
+.filtro-check{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    color: #d6c7c2;
+    cursor: pointer;
+}
+
+.filtro-check input{
+    accent-color: #b08d57;
+    cursor: pointer;
+}
+
+.filtro-cantidad{
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+.precio-max-texto{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    color: #d6c7c2;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.rango-precio{
+    width: 100%;
+    accent-color: #b08d57;
+}
+
+.precio-min-max{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    color: #d6c7c2;
+    opacity: 0.8;
+    margin-top: 8px;
+}
+
+.color-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.color-swatch{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid rgba(214,199,194,0.3);
+    cursor: pointer;
+    padding: 0;
+}
+
+.color-swatch:hover{
+    border-color: #b08d57;
+}
+
+.color-swatch.multicolor{
+    background: conic-gradient(red, orange, yellow, green, blue, violet, red);
+}
+
+/* ---- Grid de productos ---- */
+.categoria-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.producto-card{
+    display: flex;
+    flex-direction: column;
+    color: #d6c7c2;
+}
+
+.producto-card-imagen{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #1a1617;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto-card-imagen img{
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover .producto-card-imagen img{
+    transform: scale(1.05);
+}
+
+.badge{
+    position: absolute;
+    top: 12px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.badge-nuevo{
+    right: 12px;
+    background-color: #3fa66a;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.badge-descuento{
+    left: -34px;
+    top: 14px;
+    background-color: #8c2430;
+    color: #fff;
+    padding: 4px 40px;
+    transform: rotate(-45deg);
+}
+
+.btn-cart-flotante{
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #8c2430;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 2;
+}
+
+.producto-card:hover .btn-cart-flotante{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.producto-card-marca{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #b08d57;
+    margin-top: 14px;
+}
+
+.producto-card-nombre{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+.producto-card-precio{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 6px;
+    color: #d6c7c2;
+}
+
+.precio-tachado{
+    text-decoration: line-through;
+    opacity: 0.5;
+    font-weight: normal;
+    margin-right: 6px;
+}
+
+@media (max-width: 900px){
+    .categoria-seccion{
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-sidebar{
+        position: static;
+    }
+}
 @media(max-width: 576px){
     *{
     margin: 0;

@@ -1,8 +1,31 @@
-// login.js — valida correo y contraseña según las reglas del anexo, en tiempo real y al enviar
+const USUARIOS_KEY = 'cache_usuarios';
+const SESION_KEY = 'cache_sesion';
 
 const inputCorreo = document.getElementById('correo');
 const inputClave = document.getElementById('clave');
 const formLogin = document.getElementById('form-login');
+
+function sembrarAdminDemo() {
+    const usuarios = JSON.parse(localStorage.getItem(USUARIOS_KEY) || '[]');
+    const yaExiste = usuarios.some(u => u.correo === 'admin@duoc.cl');
+
+    if (!yaExiste) {
+        usuarios.push({
+            run: '111111111',
+            nombre: 'Admin',
+            apellidos: 'Sistema',
+            correo: 'admin@duoc.cl',
+            clave: 'admin1',
+            fechaNacimiento: '',
+            tipoUsuario: 'Administrador',
+            region: '0',
+            comuna: 'Santiago',
+            direccion: 'Casa matriz'
+        });
+        localStorage.setItem(USUARIOS_KEY, JSON.stringify(usuarios));
+    }
+}
+sembrarAdminDemo();
 
 function validarCampoCorreo() {
     const valor = inputCorreo.value.trim();
@@ -40,7 +63,6 @@ function validarCampoClave() {
     return true;
 }
 
-// Validación en tiempo real, mientras el usuario escribe
 inputCorreo.addEventListener('input', validarCampoCorreo);
 inputClave.addEventListener('input', validarCampoClave);
 
@@ -49,8 +71,35 @@ formLogin.addEventListener('submit', function (e) {
 
     const correoValido = validarCampoCorreo();
     const claveValida = validarCampoClave();
+    if (!correoValido || !claveValida) return;
 
-    if (correoValido && claveValida) {
+    const correo = inputCorreo.value.trim();
+    const clave = inputClave.value;
+
+    const usuarios = JSON.parse(localStorage.getItem(USUARIOS_KEY) || '[]');
+    const encontrado = usuarios.find(u => u.correo === correo && u.clave === clave);
+
+    if (!encontrado && correo !== 'admin@duoc.cl') {
+        // No está en la lista de usuarios del panel -> es un cliente cualquiera de la tienda
+        localStorage.setItem(SESION_KEY, JSON.stringify({ correo: correo, nombre: correo.split('@')[0], rol: 'Cliente' }));
         window.location.href = 'index.html';
+        return;
+    }
+
+    if (!encontrado) {
+        mostrarError(inputClave, 'Correo o contraseña incorrectos.');
+        return;
+    }
+
+    localStorage.setItem(SESION_KEY, JSON.stringify({
+        correo: encontrado.correo,
+        nombre: encontrado.nombre,
+        rol: encontrado.tipoUsuario
+    }));
+
+    if (encontrado.tipoUsuario === 'Cliente') {
+        window.location.href = 'index.html';
+    } else {
+        window.location.href = 'admin/index.html';
     }
 });

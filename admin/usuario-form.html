@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario - Panel Caché</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <style>body{ margin-top: 0; }</style>
+</head>
+<body data-pagina-admin="usuarios">
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-logo">
+                <img src="../imagenes/Cachelogo.png" alt="logo">
+                <span>Panel Caché</span>
+            </div>
+
+            <a href="index.html" class="admin-nav-link">🏠 Inicio</a>
+            <a href="productos.html" class="admin-nav-link">📦 Productos</a>
+            <a href="usuarios.html" class="admin-nav-link activo" data-solo-admin>👤 Usuarios</a>
+
+            <a href="#" class="admin-nav-salir" id="btn-cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <div class="admin-contenido">
+            <div class="admin-header">
+                <h1 id="titulo-form">Nuevo usuario</h1>
+            </div>
+
+            <div class="admin-form-caja">
+                <form class="admin-form" id="form-usuario" novalidate>
+                    <label for="run">RUN (sin puntos ni guión)</label>
+                    <input type="text" id="run" maxlength="9" required>
+                    <span class="error-mensaje" id="error-run"></span>
+
+                    <div class="admin-form-fila">
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" maxlength="50" required>
+                            <span class="error-mensaje" id="error-nombre"></span>
+                        </div>
+                        <div>
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" maxlength="100" required>
+                            <span class="error-mensaje" id="error-apellidos"></span>
+                        </div>
+                    </div>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" maxlength="100" required>
+                    <span class="error-mensaje" id="error-correo"></span>
+
+                    <label for="clave">Contraseña</label>
+                    <input type="password" id="clave" required>
+                    <span class="error-mensaje" id="error-clave"></span>
+
+                    <label for="fecha-nacimiento">Fecha de nacimiento (opcional)</label>
+                    <input type="date" id="fecha-nacimiento">
+
+                    <label for="tipo-usuario">Tipo de usuario</label>
+                    <select id="tipo-usuario" required>
+                        <option value="">-- Seleccione --</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Cliente">Cliente</option>
+                    </select>
+                    <span class="error-mensaje" id="error-tipo-usuario"></span>
+
+                    <div class="admin-form-fila">
+                        <div>
+                            <label for="region">Región</label>
+                            <select id="region" required>
+                                <option value="">-- Seleccione la región --</option>
+                            </select>
+                            <span class="error-mensaje" id="error-region"></span>
+                        </div>
+                        <div>
+                            <label for="comuna">Comuna</label>
+                            <select id="comuna" required>
+                                <option value="">-- Seleccione la comuna --</option>
+                            </select>
+                            <span class="error-mensaje" id="error-comuna"></span>
+                        </div>
+                    </div>
+
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" maxlength="300" required>
+                    <span class="error-mensaje" id="error-direccion"></span>
+
+                    <div class="admin-form-acciones">
+                        <button type="submit" class="admin-btn-guardar">Guardar</button>
+                        <button type="button" class="admin-btn-cancelar" onclick="window.location.href='usuarios.html'">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/validaciones.js"></script>
+    <script src="js/regiones-comunas.js"></script>
+    <script src="js/admin-auth.js"></script>
+    <script src="js/admin-usuario-form.js"></script>
+</body>
+</html>

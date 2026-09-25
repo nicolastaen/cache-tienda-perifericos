@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Panel Caché</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <style>body{ margin-top: 0; }</style>
+</head>
+<body data-pagina-admin="productos">
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-logo">
+                <img src="../imagenes/Cachelogo.png" alt="logo">
+                <span>Panel Caché</span>
+            </div>
+
+            <a href="index.html" class="admin-nav-link">🏠 Inicio</a>
+            <a href="productos.html" class="admin-nav-link activo">📦 Productos</a>
+            <a href="usuarios.html" class="admin-nav-link" data-solo-admin>👤 Usuarios</a>
+
+            <a href="#" class="admin-nav-salir" id="btn-cerrar-sesion">↩ Cerrar sesión</a>
+        </aside>
+
+        <div class="admin-contenido">
+            <div class="admin-header">
+                <h1 id="titulo-form">Nuevo producto</h1>
+            </div>
+
+            <div class="admin-form-caja">
+                <form class="admin-form" id="form-producto" novalidate>
+                    <label for="codigo">Código de producto</label>
+                    <input type="text" id="codigo" minlength="3" required>
+                    <span class="error-mensaje" id="error-codigo"></span>
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" maxlength="100" required>
+                    <span class="error-mensaje" id="error-nombre"></span>
+
+                    <label for="descripcion">Descripción (opcional)</label>
+                    <textarea id="descripcion" maxlength="500"></textarea>
+                    <span class="error-mensaje" id="error-descripcion"></span>
+
+                    <div class="admin-form-fila">
+                        <div>
+                            <label for="precio">Precio</label>
+                            <input type="number" id="precio" min="0" step="0.01" required>
+                            <span class="error-mensaje" id="error-precio"></span>
+                        </div>
+                        <div>
+                            <label for="categoria">Categoría</label>
+                            <select id="categoria" required>
+                                <option value="">-- Seleccione --</option>
+                                <option value="Mouse">Mouse</option>
+                                <option value="Teclado">Teclado</option>
+                                <option value="Audífonos">Audífonos</option>
+                                <option value="Mousepad">Mousepad</option>
+                            </select>
+                            <span class="error-mensaje" id="error-categoria"></span>
+                        </div>
+                    </div>
+
+                    <div class="admin-form-fila">
+                        <div>
+                            <label for="stock">Stock</label>
+                            <input type="number" id="stock" min="0" step="1" required>
+                            <span class="error-mensaje" id="error-stock"></span>
+                        </div>
+                        <div>
+                            <label for="stock-critico">Stock crítico (opcional)</label>
+                            <input type="number" id="stock-critico" min="0" step="1">
+                            <span class="error-mensaje" id="error-stock-critico"></span>
+                        </div>
+                    </div>
+
+                    <label for="imagen">Imagen (opcional, ej: imagenes/mouse.png)</label>
+                    <input type="text" id="imagen" placeholder="imagenes/mouse.png">
+
+                    <div class="admin-form-acciones">
+                        <button type="submit" class="admin-btn-guardar">Guardar</button>
+                        <button type="button" class="admin-btn-cancelar" onclick="window.location.href='productos.html'">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/validaciones.js"></script>
+    <script src="js/admin-auth.js"></script>
+    <script src="js/admin-producto-form.js"></script>
+</body>
+</html>

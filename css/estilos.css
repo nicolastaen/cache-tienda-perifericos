@@ -375,6 +375,42 @@ footer img {
     width: 20%;
 }
 
+scroll-seamless {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+scroll-seamless .scroll-list {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+}
+
+scroll-seamless[data-init="true"] .scroll-list {
+  animation: scroll-seamless-move var(--scroll-speed, 20s) linear infinite;
+}
+
+@keyframes scroll-seamless-move {
+  from { transform: translateX(var(--from-x, 0)); }
+  to   { transform: translateX(var(--end-x, -100%)); }
+}
+
+scroll-seamless.hidden {
+  visibility: hidden;
+}
+
+.scrolls{
+    background-color: #030303;
+    margin-top: 25px;
+}
+
+.scroll-item img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
 @media(max-width: 576px){
     *{
     margin: 0;

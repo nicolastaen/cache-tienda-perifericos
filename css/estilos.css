@@ -127,19 +127,20 @@ header img{
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .prod1{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
+    width: min(94%, 1600px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
 .prod2{
-    width: 710px;
-    height: 500px;
+    width: 100%;
+    aspect-ratio: 710 / 500;
     background-color: black;
     overflow: hidden;
 }
@@ -148,14 +149,18 @@ header img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: relative;
-    left: 150px;
+    transform: scale(1.2);
+    transform-origin: right center;
     transition: transform 0.3s ease;
 }
 
+.cards:hover{
+    transform: scale(1.3);
+}
+
 .cards2{
-    width: 340px;
-    height: 500px;
+    width: 100%;
+    aspect-ratio: 340 / 500;
     overflow: hidden;
     background-color: black;
 }
@@ -164,17 +169,13 @@ header img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: relative;
-    left: 100px;
+    transform: scale(1.2);
+    transform-origin: right center;
     transition: transform 0.3s ease;
 }
 
-.cards:hover{
-    transform: scale(1.2);
-}
-
 .img-cat:hover{
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 .productos{

@@ -37,6 +37,36 @@ nav{
     display: flex;
     justify-content: space-around;
 }
+.nav-derecha{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-carrito{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #b08d57; /* mismo tono oscuro que usa tu header claro */
+    transition: color 0.2s ease;
+}
+
+.carrito-badge{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #8c2430;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.7rem;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 header img{
     width: 70px;
@@ -814,7 +844,539 @@ scroll-seamless.hidden {
     font-weight: normal;
     margin-right: 6px;
 }
+/* ===== CARRITO DE COMPRAS ===== */
 
+.carrito-seccion{
+    width: min(90%, 1000px);
+    margin: 30px auto 60px;
+    color: #d6c7c2;
+}
+
+.carrito-titulo{
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    margin-bottom: 25px;
+}
+
+.carrito-contenedor{
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 30px;
+    align-items: start;
+}
+
+.carrito-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.carrito-item{
+    display: grid;
+    grid-template-columns: 70px 1fr auto auto auto;
+    align-items: center;
+    gap: 15px;
+    background-color: #1a1617;
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.carrito-item-img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    background-color: #2b2426;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.carrito-item-nombre{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.carrito-item-precio-unitario{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+.carrito-item-cantidad{
+    display: flex;
+    align-items: center;
+    border: 1px solid #b08d57;
+    border-radius: 8px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.carrito-item-cantidad button{
+    background-color: #2b2426;
+    color: #d6c7c2;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.carrito-item-cantidad button:hover{
+    background-color: #3a3335;
+}
+
+.input-cantidad{
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    background-color: #d6c7c2;
+    color: #2b2426;
+    font-family: "Roboto", sans-serif;
+}
+
+.carrito-item-subtotal{
+    font-family: "Changa One", sans-serif;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.btn-eliminar{
+    background: none;
+    border: none;
+    color: #d6c7c2;
+    opacity: 0.6;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover{
+    opacity: 1;
+    color: #8c2430;
+}
+
+.carrito-resumen{
+    background-color: #1a1617;
+    border-radius: 10px;
+    padding: 25px;
+    position: sticky;
+    top: 20px;
+}
+
+.carrito-total-linea{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: "Changa One", sans-serif;
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(214,199,194,0.2);
+}
+
+.carrito-total-monto{
+    font-size: 1.4rem;
+    color: #b08d57;
+}
+
+.carrito-cupon{
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.carrito-cupon input{
+    flex: 1;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    background-color: #d6c7c2;
+    color: #2b2426;
+    outline: none;
+    min-width: 0;
+}
+
+.btn-aplicar-cupon{
+    background-color: #2b2426;
+    color: #b08d57;
+    border: 1px solid #b08d57;
+    border-radius: 6px;
+    padding: 0 14px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+}
+
+.btn-pagar{
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3fa66a;
+    color: #fff;
+    font-family: "Changa One", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-pagar:hover{
+    opacity: 0.85;
+}
+
+.carrito-vacio{
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.btn-seguir-comprando{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: #b08d57;
+    color: #2b2426;
+    border-radius: 8px;
+    font-family: "Changa One", sans-serif;
+}
+
+@media (max-width: 700px){
+    .carrito-contenedor{
+        grid-template-columns: 1fr;
+    }
+
+    .carrito-item{
+        grid-template-columns: 50px 1fr;
+        grid-template-areas:
+            "img nombre"
+            "cantidad subtotal"
+            "eliminar eliminar";
+    }
+}
+/* ===== PÁGINA DE PRODUCTO ===== */
+
+.producto-seccion{
+    width: min(94%, 1400px);
+    margin: 20px auto 60px;
+    color: #d6c7c2;
+}
+
+.breadcrumb{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    color: #d6c7c2;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a{
+    color: #b08d57;
+    opacity: 1;
+}
+
+.producto-contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* ---- Galería ---- */
+.galeria-principal{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #1a1617;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeria-principal img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.galeria-miniaturas{
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.miniatura{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #1a1617;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.miniatura:hover{
+    border-color: #b08d57;
+}
+
+.miniatura.activa{
+    border-color: #b08d57;
+}
+
+/* ---- Info del producto ---- */
+.producto-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-marca{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #b08d57;
+}
+
+.producto-nombre{
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    color: #d6c7c2;
+    margin-top: 6px;
+}
+
+.producto-valoracion{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.estrellas{
+    color: #b08d57;
+    letter-spacing: 2px;
+}
+
+.valoracion-texto{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.producto-precio{
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.precio-actual{
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(1.6rem, 2.2vw, 2rem);
+    color: #d6c7c2;
+}
+
+.precio-anterior{
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #d6c7c2;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.precio-descuento{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    background-color: #8c2430;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+.producto-descripcion{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 18px;
+    opacity: 0.9;
+}
+
+.producto-stock{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    margin-top: 18px;
+}
+
+.stock-punto{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    display: inline-block;
+}
+
+.producto-cantidad{
+    margin-top: 22px;
+}
+
+.producto-cantidad label{
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.selector-cantidad{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid #b08d57;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.selector-cantidad button{
+    background-color: #1a1617;
+    color: #d6c7c2;
+    border: none;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.selector-cantidad button:hover{
+    background-color: #2b2426;
+}
+
+.selector-cantidad input{
+    width: 45px;
+    height: 36px;
+    text-align: center;
+    border: none;
+    background-color: #d6c7c2;
+    color: #2b2426;
+    font-family: "Roboto", sans-serif;
+}
+
+.producto-acciones{
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-agregar-carrito, .btn-comprar-ahora{
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: "Changa One", sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-agregar-carrito{
+    background-color: #2b2426;
+    color: #b08d57;
+    border: 1px solid #b08d57;
+}
+
+.btn-comprar-ahora{
+    background-color: #8c2430;
+    color: #fff;
+}
+
+.btn-agregar-carrito:hover, .btn-comprar-ahora:hover{
+    opacity: 0.85;
+}
+
+.producto-beneficios{
+    list-style: none;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(214,199,194,0.2);
+}
+
+.producto-beneficios li{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    padding: 4px 0;
+    opacity: 0.85;
+}
+
+.producto-beneficios li::before{
+    content: "✓ ";
+    color: #b08d57;
+}
+
+/* ---- Tabs de especificaciones ---- */
+.producto-tabs{
+    margin-top: 50px;
+}
+
+.tabs-header{
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid rgba(214,199,194,0.2);
+}
+
+.tab-btn{
+    background: none;
+    border: none;
+    color: #d6c7c2;
+    font-family: "Changa One", sans-serif;
+    font-size: 1rem;
+    padding: 12px 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-btn.activa{
+    opacity: 1;
+    border-bottom: 2px solid #b08d57;
+}
+
+.tab-contenido{
+    display: none;
+    padding: 25px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.tab-contenido.activa{
+    display: block;
+}
+
+.specs-tabla{
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+}
+
+.specs-tabla td{
+    padding: 10px;
+    border-bottom: 1px solid rgba(214,199,194,0.15);
+}
+
+.specs-tabla td:first-child{
+    color: #b08d57;
+    width: 40%;
+}
+
+@media (max-width: 900px){
+    .producto-contenedor{
+        grid-template-columns: 1fr;
+    }
+}
 @media (max-width: 900px){
     .categoria-seccion{
         grid-template-columns: 1fr;

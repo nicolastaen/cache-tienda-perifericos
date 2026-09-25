@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Caché</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <div class="navbar">
+                    <img src="imagenes/Cachelogo.png" alt="logo">
+                </div>
+
+                <form class="search-box">
+                    <input type="text" placeholder="Buscar algo" name="buscar" required>
+                </form>
+
+                <div class="nav-derecha">
+                    <a href="carrito.html" class="nav-carrito">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="carrito-badge" id="contador-carrito">0</span>
+                    </a>
+
+                    <div class="login">
+                        <a href="login.html">INICIAR SESIÓN</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="producto-seccion">
+
+            <!-- Migas de pan -->
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> / <a href="#">Mouse</a> / <span>G502 Hero</span>
+            </div>
+
+            <div class="producto-contenedor">
+
+                <!-- Galería de imágenes -->
+                <div class="producto-galeria">
+                    <div class="galeria-principal">
+                        <img src="imagenes/mouse.png" alt="Mouse G502 Hero" id="imagen-principal">
+                    </div>
+                    <div class="galeria-miniaturas">
+                        <img src="imagenes/mouse.png" alt="Vista 1" class="miniatura activa">
+                        <img src="imagenes/mouse.png" alt="Vista 2" class="miniatura">
+                        <img src="imagenes/mouse.png" alt="Vista 3" class="miniatura">
+                        <img src="imagenes/mouse.png" alt="Vista 4" class="miniatura">
+                    </div>
+                </div>
+
+                <!-- Información del producto -->
+                <div class="producto-info">
+                    <span class="producto-marca">LOGITECH</span>
+                    <h1 class="producto-nombre">Mouse Gamer G502 Hero</h1>
+
+                    <div class="producto-valoracion">
+                        <span class="estrellas">★★★★☆</span>
+                        <span class="valoracion-texto">(128 opiniones)</span>
+                    </div>
+
+                    <div class="producto-precio">
+                        <span class="precio-actual">$54.000</span>
+                        <span class="precio-anterior">$64.000</span>
+                        <span class="precio-descuento">-16%</span>
+                    </div>
+
+                    <p class="producto-descripcion">
+                        Sensor óptico HERO 25K de alta precisión, 11 botones programables
+                        y pesos ajustables para adaptar el mouse a tu estilo de juego.
+                    </p>
+
+                    <div class="producto-stock">
+                        <span class="stock-punto"></span> En stock — despacho en 24-48 horas
+                    </div>
+
+                    <div class="producto-cantidad">
+                        <label for="cantidad">Cantidad</label>
+                        <div class="selector-cantidad">
+                            <button type="button" id="restar">−</button>
+                            <input type="number" id="cantidad" value="1" min="1">
+                            <button type="button" id="sumar">+</button>
+                        </div>
+                    </div>
+
+                    <div class="producto-acciones">
+                        <button type="button" class="btn-agregar-carrito" id="btn-agregar">Agregar al carrito</button>
+                        <button type="button" class="btn-comprar-ahora">Comprar ahora</button>
+                    </div>
+
+                    <ul class="producto-beneficios">
+                        <li>Envío gratis en compras sobre $50.000</li>
+                        <li>Garantía oficial de 12 meses</li>
+                        <li>Retiro en tienda disponible</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Especificaciones -->
+            <div class="producto-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn activa" data-tab="descripcion">Descripción</button>
+                    <button class="tab-btn" data-tab="specs">Especificaciones</button>
+                    <button class="tab-btn" data-tab="opiniones">Opiniones (128)</button>
+                </div>
+
+                <div class="tab-contenido activa" id="descripcion">
+                    <p>
+                        El G502 Hero combina un sensor de altísima precisión con un diseño
+                        ergonómico pensado para sesiones largas de juego. Sus botones laterales
+                        y el sistema de pesos ajustables lo hacen ideal tanto para FPS como para
+                        juegos de estrategia.
+                    </p>
+                </div>
+
+                <div class="tab-contenido" id="specs">
+                    <table class="specs-tabla">
+                        <tr><td>Sensor</td><td>HERO 25K</td></tr>
+                        <tr><td>DPI máximo</td><td>25.600</td></tr>
+                        <tr><td>Botones</td><td>11 programables</td></tr>
+                        <tr><td>Conexión</td><td>Cable USB</td></tr>
+                        <tr><td>Peso</td><td>121 g (ajustable)</td></tr>
+                    </table>
+                </div>
+
+                <div class="tab-contenido" id="opiniones">
+                    <p>Aquí puedes conectar tu sistema de reseñas más adelante.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer1">
+            <div class="pie-pagina">
+                <img src="imagenes/Cachelogo.png" alt="logo">
+            </div>
+            <div class="pie-pagina">
+                <a href="sobre-nosotros.html">Sobre nosotros</a>
+            </div>
+            <div class="pie-pagina">
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+        <div class="footer2">
+            hola
+        </div>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/producto.js"></script>
+</body>
+</html>

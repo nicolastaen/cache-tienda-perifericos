@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi carrito - Caché</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <div class="navbar">
+                    <img src="imagenes/Cachelogo.png" alt="logo">
+                </div>
+
+                <form class="search-box">
+                    <input type="text" placeholder="Buscar algo" name="buscar" required>
+                </form>
+
+                <div class="login">
+                    <a href="carrito.html">🛒 Cart (<span id="contador-carrito">0</span>)</a>
+                    <a href="login.html">INICIAR SESIÓN</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="carrito-seccion">
+            <h1 class="carrito-titulo">Mi carrito de compras</h1>
+
+            <div class="carrito-contenedor" id="carrito-contenedor">
+                <!-- Se llena dinámicamente con JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer1">
+            <div class="pie-pagina">
+                <img src="imagenes/Cachelogo.png" alt="logo">
+            </div>
+            <div class="pie-pagina">
+                <a href="sobre-nosotros.html">Sobre nosotros</a>
+            </div>
+            <div class="pie-pagina">
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+        <div class="footer2">
+            hola
+        </div>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/carrito-vista.js"></script>
+</body>
+</html>

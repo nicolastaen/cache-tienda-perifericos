@@ -11,6 +11,8 @@ rojo oscuro #5a0f1b
     margin: 0;
     padding: 0;
     text-decoration: none;
+    scrollbar-width: thin;
+    scrollbar-color: #c4c8cc transparent;
 }
 
 body{
@@ -63,10 +65,6 @@ header img{
     display: flex;
     justify-content: center;
     text-align: start;
-}
-
-.crd-contacto{
-
 }
 
 .formulario-contacto{
@@ -125,24 +123,55 @@ header img{
 }
 
 .seccion2{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    text-align: center;
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
 }
-.seccion2 .cards img{
-    margin-top: 30px;
-    width: 95%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px rgb(0,0,0,0.5);
 
-    transition: transform 0.3s ease;
+.prod1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
-.seccion2 .cards img:hover{
-    transform: scale(1.05);
+
+.prod2{
+    display: flex;
+    width: 710px;
+    height: 500px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.cards{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+    border: 2px solid;
+}
+
+.cards2{
+    width: 340px;
+    height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: black;
+}
+
+.img-cat{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards:hover{
+    transform: scale(1.25);
+    transform-origin: left center;
 }
 
 .productos{
@@ -175,6 +204,7 @@ header img{
     font-style: normal;
     padding: 3px;
 }
+
 .btn{
     position: relative;
     width: 120px;
@@ -216,17 +246,37 @@ header img{
 
 footer{
     width: 100%;
-    height: auto;
-    background-color:#8c2430;
-    
 }
-.footer1{
+
+.pie-pagina{
+    background-color:#8c2430;
+    padding: 20px;
     width: 100%;
     height: autos;
     display: flex;
     justify-content: space-between;
     margin-top: 50px; 
     padding-top: 25px;
+}
+
+.sobre-nosotros{
+    color: #2b2426;
+    font-family:"Changa One", sans-serif;
+    font-size: x-large;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color:#8c2430;
+    
+}
+.footer1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; 
 }
 
 .footer2{

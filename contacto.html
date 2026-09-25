@@ -9,7 +9,10 @@
     <header>
         <nav>
             <div class="navbar">
-                <img src="imagenes/Cachelogo.png" alt="logo">                </div>
+                <a href="index.html">
+                    <img src="imagenes/Cachelogo.png" alt="logo">
+                </a>
+                </div>
     
             <form class="search-box">
                 <input type="text" placeholder="Buscar algo" name="buscar" required>
@@ -23,11 +26,23 @@
     <div class = formulario-contacto>
         <h1>formulario de contacto</h1>
         <form class="cdr-contacto">
-            <input type="text" placeholder="correo" required>
-            <input type="text" placeholder="mensaje" required>
-            <input type="text" placeholder="dirección" required>
+            <div class="campo">
+                <label for="">Correo electrónico </label>
+                <input type="text" placeholder="*" class="" required>
+            </div>
+            <div class="campo">
+                <label for="">Direccion</label>
+                <input type="text" placeholder="*" class="" required>
+            </div>
+            <div class="campo">
+                <label for="">Mensaje</label>
+                <textarea type="text" placeholder="*" class="" required>
+                </textarea>
+            </div>
+            <button type="submit">
+                Enviar
+            </button>
         </form>
-
     </div>
     
 </body>

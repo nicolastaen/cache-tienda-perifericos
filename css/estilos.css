@@ -67,12 +67,64 @@ header img{
     text-align: start;
 }
 
-.formulario-contacto{
-    width: 75%;
-    background-color: #8c2430;
+.formulario-contacto {
+    font-family: "Changa One", sans-serif;
+    font-style: normal;
+    color: #b08d57;
+    background-color: #ec0a2423;
     justify-content: center;
+    padding: 30px 40px;
     display: flex;
-    padding: 15%;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    margin-top: 200px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+
+}
+
+button[type="submit"] {
+  align-self: flex-end;
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button[type="submit"]:hover {
+  background-color: #444;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cdr-contacto input{
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    min-height: 35px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 3px;
+    padding: 0 10px;
+    
+
+}
+
+.cdr-contacto textarea{
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    min-height: 200px;
+    border-radius: 3px;
+    padding: 0 80px;
+    box-sizing: border-box;
 }
 
 .search-box input{

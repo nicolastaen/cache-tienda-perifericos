@@ -2,10 +2,10 @@
 
 // ---- Datos del producto actual (por ahora fijo, luego vendrá del backend) ----
 const productoActual = {
-    id: 'g502-hero',
-    nombre: 'Mouse Gamer G502 Hero',
-    precio: 54000,
-    imagen: 'imagenes/mouse.png'
+    id: 'Mouse Gamer ATK Blazing Sky X1 V2 Air+',
+    nombre: 'Mouse Gamer ATK Blazing Sky X1 V2 Air+',
+    precio: 104.990,
+    imagen: 'imagenes/mouse1.png'
 };
 
 // ---- Tabs (Descripción / Especificaciones / Opiniones) ----

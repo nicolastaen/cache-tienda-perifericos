@@ -138,7 +138,6 @@ header img{
 }
 
 .prod2{
-    display: flex;
     width: 710px;
     height: 500px;
     background-color: black;
@@ -149,16 +148,14 @@ header img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.2);
-    transform-origin: left center;
+    position: relative;
+    left: 150px;
     transition: transform 0.3s ease;
-    border: 2px solid;
 }
 
 .cards2{
     width: 340px;
     height: 500px;
-    object-fit: cover;
     overflow: hidden;
     background-color: black;
 }
@@ -167,11 +164,17 @@ header img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    left: 100px;
+    transition: transform 0.3s ease;
 }
 
 .cards:hover{
-    transform: scale(1.25);
-    transform-origin: left center;
+    transform: scale(1.2);
+}
+
+.img-cat:hover{
+    transform: scale(1.2);
 }
 
 .productos{
@@ -259,12 +262,6 @@ footer{
     padding-top: 25px;
 }
 
-.sobre-nosotros{
-    color: #2b2426;
-    font-family:"Changa One", sans-serif;
-    font-size: x-large;
-}
-
 footer{
     width: 100%;
     height: auto;
@@ -311,10 +308,21 @@ footer img {
 }
 
 .sobre-nosotros{
-    color: white;
+    color: #d6c7c2;
     font-family:"Changa One", sans-serif;
     font-size: x-large;
+    text-align: justify;
+    justify-content:center;
+    margin-left: 176px;
+    margin-right: 176px;
+    padding: 0px 24px;
+
 }
+
+.sobre-nosotros img{
+    width: 20%;
+}
+
 @media(max-width: 576px){
     *{
     margin: 0;

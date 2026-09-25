@@ -25,7 +25,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #d6c7c2;
+    background-color: #2b2426;
     top: 0;
     left: 0;
     position: fixed;
@@ -101,8 +101,10 @@ button[type="submit"]:hover {
 
 .campo{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
+    height: auto;
 }
 
 .cdr-contacto input{
@@ -200,13 +202,13 @@ button[type="submit"]:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.2);
-    transform-origin: right center;
+    transform: scale(1.1);
+    transform-origin: -130% 20%;
     transition: transform 0.3s ease;
 }
 
 .cards:hover{
-    transform: scale(1.3);
+    transform: scale(1.15);
 }
 
 .cards2{
@@ -220,13 +222,28 @@ button[type="submit"]:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.2);
-    transform-origin: right center;
+    transform: scale(1.1);
+    transform-origin: -130% 20%;
     transition: transform 0.3s ease;
 }
+.prod2, .cards2{
+    position: relative; 
+}
 
+.texto-barra{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* para que quede sobre la imagen */
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 .img-cat:hover{
-    transform: scale(1.3);
+    transform: scale(1.15   );
 }
 
 .productos{
@@ -299,25 +316,11 @@ button[type="submit"]:hover {
     transform: translate(-50%, -50%);
 }
 
-footer{
-    width: 100%;
-}
-
-.pie-pagina{
-    background-color:#8c2430;
-    padding: 20px;
-    width: 100%;
-    height: autos;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px; 
-    padding-top: 25px;
-}
 
 footer{
     width: 100%;
     height: auto;
-    background-color:#8c2430;
+    background-color:#000000;
     
 }
 .footer1{
@@ -335,7 +338,7 @@ footer{
     text-align: center;
     width: 90%;
     height: auto;
-    border-top: 2px solid;
+    border-top: 2px solid rgb(189, 189, 189);
     padding: 20px;
     margin: auto;
 }
@@ -344,6 +347,7 @@ footer{
     align-items: start;
     width: 100%;
     height: auto;
+    margin-top: 30px;
 }
 
 footer img {
@@ -356,7 +360,7 @@ footer img {
     font-family: "Changa One", sans-serif;
     font-weight: 400px;
     font-style: normal;
-    color: #b08d57;
+    color: #faf7f3;
 }
 
 .sobre-nosotros{
@@ -409,6 +413,140 @@ scroll-seamless.hidden {
   width: 200px;
   height: auto;
   display: block;
+}
+
+.login-section{
+    width: 100%;
+    min-height: calc(100vh - 89px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-box{
+    width: min(90%, 420px);
+    background-color: #8c2430;
+    border-radius: 12px;
+    padding: clamp(30px, 4vw, 50px);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
+.login-box h1{
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #d6c7c2;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    text-align: center;
+}
+
+.login-subtitulo{
+    font-family: "Roboto", sans-serif;
+    color: #d6c7c2;
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    opacity: 0.85;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label{
+    font-family: "Roboto", sans-serif;
+    color: #d6c7c2;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    margin-top: 15px;
+}
+
+.login-form label:first-of-type{
+    margin-top: 0;
+}
+
+.login-form input{
+    border: none;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-family: "Roboto", sans-serif;
+    color: #2b2426;
+    background-color: #d6c7c2;
+    outline: none;
+}
+
+.login-form input:focus{
+    outline: 2px solid #b08d57;
+}
+
+.olvide-clave{
+    align-self: flex-end;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    color: #b08d57;
+    margin-top: 10px;
+}
+
+.olvide-clave:hover{
+    text-decoration: underline;
+}
+
+.btn-login{
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2b2426;
+    color: #b08d57;
+    font-family: "Changa One", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover{
+    background-color: #1a1617;
+}
+
+.separador{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: #d6c7c2;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+}
+
+.separador::before,
+.separador::after{
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #d6c7c2;
+    opacity: 0.4;
+}
+
+.separador span{
+    padding: 0 12px;
+}
+
+.registro-texto{
+    font-family: "Roboto", sans-serif;
+    color: #d6c7c2;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.registro-texto a{
+    color: #b08d57;
+    font-weight: bold;
+}
+
+.registro-texto a:hover{
+    text-decoration: underline;
 }
 
 @media(max-width: 576px){

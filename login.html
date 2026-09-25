@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar sesión - Caché</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Esta página no tiene header fijo, así que anulamos el margin-top global del body */
+        body{
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-    
+    <main>
+        <section class="login-section">
+            <div class="login-box">
+                <h1>Bienvenido de vuelta</h1>
+                <p class="login-subtitulo">Ingresa tus datos para entrar a tu cuenta</p>
+
+                <form class="login-form" id="form-login">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+                    <label for="clave">Contraseña</label>
+                    <input type="password" id="clave" name="clave" placeholder="Ingresa tu contraseña" required>
+
+                    <a href="#" class="olvide-clave">¿Olvidaste tu contraseña?</a>
+
+                    <button type="submit" class="btn-login">Iniciar sesión</button>
+                </form>
+
+                <div class="separador">
+                    <span>o</span>
+                </div>
+
+                <p class="registro-texto">
+                    ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
 </body>
 </html>

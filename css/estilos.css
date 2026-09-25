@@ -66,23 +66,22 @@ header img{
     justify-content: center;
     text-align: start;
 }
-
+.formulario{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .formulario-contacto {
     font-family: "Changa One", sans-serif;
     font-style: normal;
     color: #b08d57;
     background-color: #ec0a2423;
-    justify-content: center;
     padding: 30px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 200px;
-    margin-top: 200px;
     border-radius: 8px;
-    width: 100%;
-    max-width: 500px;
-
+    width: 50%;
+    margin-top: 80px;
 }
 
 button[type="submit"] {

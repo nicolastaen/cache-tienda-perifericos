@@ -1,6 +1,3 @@
-// carrito-vista.js — renderiza el contenido de carrito.html
-// Depende de las funciones definidas en carrito.js (debe cargarse antes)
-
 function renderizarCarrito() {
     const contenedor = document.getElementById('carrito-contenedor');
     const carrito = obtenerCarrito();

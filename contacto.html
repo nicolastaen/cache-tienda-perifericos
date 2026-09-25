@@ -6,50 +6,52 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-        <header>
-            <nav>
-                <div class="navbar">
-                    <a href="index.html">
-                        <img src="imagenes/Cachelogo.png" alt="logo">
-                    </a>
+    <header>
+        <nav>
+            <div class="navbar">
+                <a href="index.html">
+                    <img src="imagenes/Cachelogo.png" alt="logo">
+                </a>
+            </div>
+
+            <form class="search-box">
+                <input type="text" placeholder="Buscar algo" name="buscar" required>
+            </form>
+
+            <div class="nav-derecha">
+                <a href="carrito.html" class="nav-carrito">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="carrito-badge" id="contador-carrito">0</span>
+                </a>
+
+                <div class="login">
+                    <a href="login.html">INICIAR SESIÓN</a>
                 </div>
-
-                <form class="search-box">
-                    <input type="text" placeholder="Buscar algo" name="buscar" required>
-                </form>
-
-                <div class="nav-derecha">
-                    <a href="carrito.html" class="nav-carrito">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="9" cy="21" r="1"></circle>
-                            <circle cx="20" cy="21" r="1"></circle>
-                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                        </svg>
-                        <span class="carrito-badge" id="contador-carrito">0</span>
-                    </a>
-
-                    <div class="login">
-                        <a href="login.html">INICIAR SESIÓN</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
     <div class="formulario">
-        <div class = "formulario-contacto">
+        <div class="formulario-contacto">
             <h1>formulario de contacto</h1>
-            <form class="cdr-contacto">
+            <form class="cdr-contacto" id="form-contacto" novalidate>
                 <div class="campo">
-                    <label for="">Correo electrónico </label>
-                    <input type="text" placeholder="*" class="" required>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="*" maxlength="100" required>
+                    <span class="error-mensaje" id="error-nombre"></span>
                 </div>
                 <div class="campo">
-                    <label for="">Direccion</label>
-                    <input type="text" placeholder="*" class="" required>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="text" id="correo" name="correo" placeholder="*" maxlength="100" required>
+                    <span class="error-mensaje" id="error-correo"></span>
                 </div>
                 <div class="campo">
-                    <label for="">Mensaje</label>
-                    <textarea type="text" placeholder="*" class="" required>
-                    </textarea>
+                    <label for="comentario">Mensaje</label>
+                    <textarea id="comentario" name="comentario" placeholder="*" maxlength="500" required></textarea>
+                    <span class="error-mensaje" id="error-comentario"></span>
                 </div>
                 <button type="submit">
                     Enviar
@@ -57,6 +59,7 @@
             </form>
         </div>
     </div>
-    
+    <script src="js/validaciones.js"></script>
+    <script src="js/contacto.js"></script>
 </body>
 </html>

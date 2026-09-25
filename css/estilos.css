@@ -104,60 +104,101 @@ header img{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
 }
-.formulario-contacto {
+
+.formulario-contacto{
     font-family: "Changa One", sans-serif;
     font-style: normal;
-    color: #b08d57;
-    background-color: #ec0a2423;
+    color: #d6c7c2;
+    background-color: #8c2430;
     padding: 30px 40px;
     border-radius: 8px;
-    width: 50%;
+    width: min(90%, 600px); /* responsivo: nunca más de 600px, se achica en pantallas chicas */
     margin-top: 80px;
+    margin-bottom: 60px;
 }
 
-button[type="submit"] {
-  align-self: flex-end;
-  background-color: #555;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
+.formulario-contacto h1{
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
-button[type="submit"]:hover {
-  background-color: #444;
+.cdr-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .campo{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: auto;
+}
+
+.campo label{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    color: #d6c7c2;
+    margin-bottom: 6px;
 }
 
 .cdr-contacto input{
-    border: 1px solid #ddd;
-    margin-bottom: 5px;
-    min-height: 35px;
-    padding-left: 10px;
-    padding-right: 15px;
-    border-radius: 3px;
-    padding: 0 10px;
-    
-
+    border: none;
+    min-height: 40px;
+    padding: 0 14px;
+    border-radius: 6px;
+    font-family: "Roboto", sans-serif;
+    background-color: #d6c7c2;
+    color: #2b2426;
+    outline: none;
 }
 
 .cdr-contacto textarea{
-    border: 1px solid #ddd;
-    margin-bottom: 5px;
-    min-height: 200px;
-    border-radius: 3px;
-    padding: 0 80px;
+    border: none;
+    min-height: 150px;
+    padding: 12px 14px; /* antes tenía 0 80px, dejaba el texto pegado arriba/abajo */
+    border-radius: 6px;
+    font-family: "Roboto", sans-serif;
+    background-color: #d6c7c2;
+    color: #2b2426;
+    outline: none;
+    resize: vertical; /* permite agrandar solo hacia abajo, no a lo ancho */
     box-sizing: border-box;
+}
+
+.cdr-contacto input:focus,
+.cdr-contacto textarea:focus{
+    outline: 2px solid #b08d57;
+}
+
+button[type="submit"]{
+    align-self: flex-end;
+    background-color: #2b2426;
+    color: #b08d57;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Changa One", sans-serif;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+}
+
+button[type="submit"]:hover{
+    opacity: 0.85;
+}
+
+.cdr-contacto .error-mensaje{
+    color: #ffdcdc;
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.cdr-contacto .input-invalido{
+    outline: 2px solid #ffdcdc;
 }
 
 .search-box input{

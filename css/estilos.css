@@ -1047,6 +1047,29 @@ scroll-seamless.hidden {
     font-family: "Changa One", sans-serif;
 }
 
+.error-mensaje{
+    display: block;
+    min-height: 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.78rem;
+    color: #ff6b6b;
+    margin-top: 4px;
+}
+
+.input-invalido{
+    outline: 2px solid #ff6b6b;
+}
+
+.login-form select{
+    border: none;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-family: "Roboto", sans-serif;
+    color: #2b2426;
+    background-color: #d6c7c2;
+    outline: none;
+    margin-top: 6px;
+}
 @media (max-width: 700px){
     .carrito-contenedor{
         grid-template-columns: 1fr;

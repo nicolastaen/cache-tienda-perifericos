@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear cuenta - Caché</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body{
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -13,18 +18,49 @@
                 <h1>Crea tu cuenta</h1>
                 <p class="login-subtitulo">Regístrate para empezar a comprar en Caché</p>
 
-                <form class="login-form" id="form-registro">
-                    <label for="nombre">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <form class="login-form" id="form-registro" novalidate>
+                    <label for="run">RUN (sin puntos ni guión)</label>
+                    <input type="text" id="run" name="run" placeholder="Ej: 190110221" maxlength="9" required>
+                    <span class="error-mensaje" id="error-run"></span>
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" maxlength="50" required>
+                    <span class="error-mensaje" id="error-nombre"></span>
+
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" maxlength="100" required>
+                    <span class="error-mensaje" id="error-apellidos"></span>
 
                     <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@duoc.cl" maxlength="100" required>
+                    <span class="error-mensaje" id="error-correo"></span>
 
                     <label for="clave">Contraseña</label>
-                    <input type="password" id="clave" name="clave" placeholder="Crea una contraseña" minlength="6" required>
+                    <input type="password" id="clave" name="clave" placeholder="Entre 4 y 10 caracteres" required>
+                    <span class="error-mensaje" id="error-clave"></span>
 
                     <label for="clave2">Confirmar contraseña</label>
-                    <input type="password" id="clave2" name="clave2" placeholder="Repite tu contraseña" minlength="6" required>
+                    <input type="password" id="clave2" name="clave2" placeholder="Repite tu contraseña" required>
+                    <span class="error-mensaje" id="error-clave2"></span>
+
+                    <label for="fecha-nacimiento">Fecha de nacimiento (opcional)</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+
+                    <label for="region">Región</label>
+                    <select id="region" name="region" required>
+                        <option value="">-- Seleccione la región --</option>
+                    </select>
+                    <span class="error-mensaje" id="error-region"></span>
+
+                    <label for="comuna">Comuna</label>
+                    <select id="comuna" name="comuna" required>
+                        <option value="">-- Seleccione la comuna --</option>
+                    </select>
+                    <span class="error-mensaje" id="error-comuna"></span>
+
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Calle, número, depto" maxlength="300" required>
+                    <span class="error-mensaje" id="error-direccion"></span>
 
                     <label class="check-terminos">
                         <input type="checkbox" id="terminos" name="terminos" required>
@@ -45,6 +81,8 @@
         </section>
     </main>
 
+    <script src="js/validaciones.js"></script>
+    <script src="js/regiones-comunas.js"></script>
     <script src="js/registro.js"></script>
 </body>
 </html>
